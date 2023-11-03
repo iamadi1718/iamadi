@@ -69,7 +69,13 @@ flutter:
     - lib/manas.png
     - lib/dhruv.png
 
-    - lib   /screen.png
+    - lib/apple.png
+    - lib/email.png
+    - lib/google.png
+    - lib/hospital.png
+    - lib/cap.png
+    - lib/ste.png
+    - lib/cal.png
 
 
 
