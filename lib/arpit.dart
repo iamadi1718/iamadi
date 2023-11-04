@@ -14,39 +14,50 @@ class thirdState extends State<third> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
 
-      ),
       body: Padding(
-        padding: EdgeInsets.all(40.0),
-
-        child: Column(
-          children: <Widget>[
+        padding: EdgeInsets.all(5.0),
 
 
-
-            Row(
-              children:[
-                Text(
-                  'Hello,Arpit',
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    color: Colors.black,
-                  ),
-                ),
-                SizedBox(width:140.0),
-                IconButton(onPressed: (){}, icon: Icon(Icons.notification_add_outlined)),
-              ],
-            ),
-            SizedBox(height: 40.0),
+         child:Column(
+          children:[
             Container(
+
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
-                  color: Colors.white24,
+                color: Color(0xFF73B8BF),
+                  border: Border.all(color: Colors.cyan),
                   borderRadius: BorderRadius.circular(10)),
               // height: 70,
               margin: const EdgeInsets.all(1),
-              padding: EdgeInsets.fromLTRB(20.0, 3.0, 20.0, 3.0),
+            width:500.0,
+            height: 170.0,
+            child:Column(
+              children:[
+              Row(
+
+              children:[
+                SizedBox(width:20.0),
+                Text(
+                  'Hello,Arpit',
+                  style: TextStyle(
+                    fontSize: 25.0,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(width:180.0),
+                IconButton(onPressed: (){}, icon: Icon(Icons.notification_add_outlined)),
+              ],
+            ),
+
+
+            Container(
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                  color: Color(0xffEEF6F7),
+                  borderRadius: BorderRadius.circular(10)),
+              // height: 70,
+              margin: const EdgeInsets.all(20),
+              padding: EdgeInsets.fromLTRB(15.0, 3.0, 20.0, 3.0),
               child:Row(
                 children: [
                   IconButton(onPressed: (){}, icon: Icon(Icons.search)),
@@ -56,11 +67,15 @@ class thirdState extends State<third> {
 
               ),
             ),
+              ],
+            ),
+            ),
+
 
 
             SizedBox(height: 20.0),
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
 
@@ -189,7 +204,7 @@ class thirdState extends State<third> {
             ),
 
 
-            SizedBox(height: 30.0),
+            SizedBox(height: 5.0),
             Row(
               children:[
                 Text(
@@ -229,7 +244,10 @@ class thirdState extends State<third> {
                 Expanded(
                   child: Column(
                     children: <Widget>[
-                      Image.asset('lib/manas.png'),
+                      Image.asset('lib/manas.png',
+                      height:130.0,
+                      width:160.0,
+                      ),
                       Text('Dr Manas Jha'),
                     ],
                   ),
@@ -251,34 +269,38 @@ class thirdState extends State<third> {
                 ),
               ],
             ),
+            SizedBox(height:30.0),
 
-          ],
-
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
+            BottomNavigationBar(
 
 
-        type: BottomNavigationBarType.fixed, // Use this to make all icons visible
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.medical_services),
-            label: 'Doctor',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+              type: BottomNavigationBarType.fixed, // Use this to make all icons visible
+              items: [
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.shopping_cart),
+                  label: 'Cart',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.medical_services),
+                  label: 'Doctor',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: 'Profile',
+                ),
+              ],
+            ),
+
+
+    ],
+    ),
+    ),
     );
+
+
   }
 }
