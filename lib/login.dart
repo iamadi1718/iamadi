@@ -63,47 +63,49 @@ class _LoginscreenState extends State<Loginscreen> {
 
             SizedBox(height: 40.0),
 
-            Container(
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
-                  borderRadius: BorderRadius.circular(10)),
-              // height: 70,
-              margin: const EdgeInsets.all(10),
-              padding: EdgeInsets.fromLTRB(30.0, 15.0, 10.0, 15.0),
-              child:Row(
-                children: [
-                  Image.asset(
-                    'lib/email.png',
-                    height: 20.0,
-                    width:20.0,
-                  ),
-                  SizedBox(width:20.0),
-                  Text('manasjha0101@gmail.com'),
-                ],
+            TextField(
+                    decoration: InputDecoration(
 
+
+                      enabledBorder:OutlineInputBorder(
+                        borderSide: BorderSide(color:Colors.black),
+
+
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+
+
+                      ),
+                      hintText: 'Email',
+
+                      prefixIcon: Icon(Icons.email_outlined),
+                      fillColor: Colors.white,
+                      filled: true,
+                    )
+
+                ),
+
+              SizedBox(height: 20.0),
+               TextField(
+                obscureText: true,
+                  autofocus: false,
+                  decoration: InputDecoration(
+
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                      hintText: "Password",
+
+                      prefixIcon: Icon(Icons.lock),
+                      suffixIcon:
+                        Icon(Icons.remove_red_eye_rounded),
               ),
-
-            ),
-            SizedBox(height: 20.0),
-            Container(
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
-                  borderRadius: BorderRadius.circular(10)),
-              // height: 70,
-              margin: const EdgeInsets.all(10),
-              padding: EdgeInsets.fromLTRB(10.0, 3.0, 3.0, 3.0),
-              child:Row(
-                children: [
-                  IconButton(onPressed: (){}, icon: Icon(Icons.lock)),
-                  SizedBox(width:10.0),
-                  Text('dig1234'),
-                  SizedBox(width:120.0),
-                  IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye_rounded)),
-                ],
-
-              ),
-
-            ),
+               ),
             SizedBox(height:20.0),
             Text('Forgot password?',
               style: TextStyle(
